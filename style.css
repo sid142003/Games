@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+#hotelDashboard {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#stats p {
+    margin: 5px;
+}
+
+#rooms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.room {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #add8e6;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.room.over {
+    border: 2px dashed #000;
+}
+
+.guest {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f;
+    border-radius: 50%;
+    cursor: grab;
+}
+
+.guest.grabbing {
+    cursor: grabbing;
+}
+
+.upgraded {
+    background-color: #ffd700;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* Include previous styles and add the following */
+
+#timer, #chanceDisplay {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+}
+
+#chanceDisplay {
+    right: auto;
+    left: 20px;
+}
+
+#results {
+    margin-top: 20px;
+    font-size: 18px;
+}
