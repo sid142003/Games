@@ -33,7 +33,9 @@ function addGuest() {
     guest.setAttribute('draggable', true);
     guest.addEventListener('dragstart', dragStart);
     guest.addEventListener('dragend', dragEnd);
-    document.body.appendChild(guest); // Temporarily add to body for positioning
+    // document.body.appendChild(guest); // Temporarily add to body for positioning
+    document.getElementById('guestContainer').appendChild(guest); // Append guest to the guestContainer
+
     positionGuest(guest);
 }
 
@@ -222,5 +224,4 @@ function clearRooms() {
     // Consider reinitializing a default set of rooms here if needed for the start of each chance
 }
 
-// Update other necessary parts of the script for startTimer, finishRound, resetForNextChance, etc.,
-// as provided in the full game logic.
+
