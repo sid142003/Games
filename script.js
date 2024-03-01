@@ -89,6 +89,12 @@ function drop(e) {
     const room = e.target.closest('.room');
     room.classList.remove('over');
 
+    // Check if the room already contains a guest
+    if (room.querySelector('.guest')) {
+        alert("There is already a guest in this room!");
+        return; // Stop further execution
+    }
+
     if (room.getAttribute('data-type') === guest.getAttribute('data-room-type')) {
         room.appendChild(guest);
         guest.classList.remove('grabbing', 'hide');
@@ -104,6 +110,7 @@ function drop(e) {
         document.body.appendChild(guest);
     }
 }
+
 
 function upgradeRoom(room) {
     if (room.getAttribute('data-type') === 'normal') {
@@ -218,10 +225,10 @@ function addGuestCheckRooms() {
 
 // Ensure the rest of your game logic (addRoom, addGuest, etc.) is included here as previously defined.
 
-function clearRooms() {
-    const roomsElement = document.getElementById('rooms');
-    roomsElement.innerHTML = ''; // Clear all rooms for a fresh start in each round/chance
-    // Consider reinitializing a default set of rooms here if needed for the start of each chance
-}
+// function clearRooms() {
+//     const roomsElement = document.getElementById('rooms');
+//     roomsElement.innerHTML = ''; // Clear all rooms for a fresh start in each round/chance
+//     // Consider reinitializing a default set of rooms here if needed for the start of each chance
+// }
 
 
